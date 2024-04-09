@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Nexa Heavy";
+  src: url(../fonts/NexaHeavy.otf);
+}
+
+@font-face {
+  font-family: "Nexa Bold";
+  src: url(../fonts/NexaBold.otf);
+}
+
+@font-face {
+  font-family: "Nexa Black";
+  src: url(../fonts/NexaBlack.otf);
+}
+
+@font-face {
+  font-family: "Nexa Light";
+  src: url(../fonts/NexaLight.otf);
+}
+
+@font-face {
+  font-family: "Nexa Regular";
+  src: url(../fonts/NexaRegular.otf);
+}
+
+@font-face {
+  font-family: "Montserrat Black";
+  src: url(../fonts/Montserrat-Black.woff2);
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(../fonts/Montserrat-Bold.woff2);
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(../fonts/Montserrat-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Kommissar Condensed";
+  src: url(../fonts/KommissarCondensed-Medium.woff2);
+}
+
+li::before {
+  content: url("../images/yellow.png");
+  width: 20px;
+  margin-right: 8px;
+}

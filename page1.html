@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!-- REQUIRED // Load js and css files -->
+    <script type="module" src="/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
+  <body class="bg-[#0C052F] text-white">
+    <section
+      class="first_section bg-[url('/assets/src/images/bg-lighting.png')] relative"
+    >
+      <div class="game_page max-w-[1430px] mx-auto pt-12">
+        <div class="breadcrumbs_container">
+          <div class="breadcrumbs flex items-center gap-8">
+            <div
+              class="back_games max-w-[178px] border border-[A4D8FF] text-white rounded-3xl"
+            >
+              <a
+                href="#"
+                class="flex items-center py-2 px-3 justify-center font-nexaheavy text-[18px] font-black"
+                ><img
+                  src="./assets/src/images/back_icon.png"
+                  alt="back icon"
+                /><span>Back to Games</span></a
+              >
+            </div>
+
+            <div
+              class="breadcrumbs_menu text-[#C4E8FF] font-roboto leading-6 font-normal"
+            >
+              <a href="#">Casino</a> &gt; <a href="#">Games</a> &gt;
+              <a href="#">Yak & Yeti</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="game_play_banner pt-12">
+          <div
+            class="banner_heading bg-[#1d1b48] flex items-center justify-between px-6"
+          >
+            <div
+              class="left_col font-nexaregular text-[32px] font-normal leading-[38.4px] text-white flex items-center gap-5 py-8"
+            >
+              <p>Yak & Yeti Roll Slot Game</p>
+              <p class="flex items-center gap-2">
+                <span>4.8</span
+                ><img src="./assets/src/images/star.png" alt="star image" />
+              </p>
+            </div>
+
+            <div
+              class="right_col flex items-center text-center gap-3 font-nexaheavy font-black text-[18px]"
+            >
+              <a
+                class="block w-[254px] py-5 px-3 rounded-[50px] border border-2-[#A4D8FF] text-white"
+                href="#"
+                >Play Demo</a
+              >
+              <a
+                class="block w-[254px] py-5 px-3 rounded-[50px] border border-1-[#D2EEFF] bg-[#D2EEFF] text-[#280374]"
+                href="#"
+                >Play for Real</a
+              >
+            </div>
+          </div>
+          <div class="game_image w-full h-[747px]">
+            <img
+              class="block w-full h-full"
+              src="./assets/src/images/game_image.jpeg"
+              alt="game image"
+            />
+          </div>
+          <div
+            class="banner_footer bg-[#1d1b48] flex items-center justify-center font-nexaregular font-normal text-2xl py-8"
+          >
+            <p>Min Bet: 0.10 / Max Bet: 10.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="free_spin_container pt-12">
+        <div
+          class="free_spin max-w-[854px] mx-auto text-white font-nexabold font-bold tracking-[0.1px] text-center text-[18px] flex items-center gap-[14px]"
+        >
+          <a
+            class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
+            href="#"
+            >Freespins</a
+          >
+          <a
+            class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
+            href="#"
+            >Freespins</a
+          >
+          <a
+            class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
+            href="#"
+            >Freespins</a
+          >
+          <a
+            class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
+            href="#"
+            >Freespins</a
+          >
+          <a
+            class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
+            href="#"
+            >Freespins</a
+          >
+          <a
+            class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
+            href="#"
+            >Freespins</a
+          >
+        </div>
+
+        <!-- component -->
+
+        <div
+          class="percentage_block max-w-[854px] mx-auto pt-12 flex flex-wrap items-center justify-between"
+        >
+          <div class="gameplay_block">
+            <div
+              class="flex flex-col justify-center gap-3 text-center max-w-[180px] mx-auto"
+              x-data="{ circumference: 80 * 2 * Math.PI, percent: 70 }"
+            >
+              <div class="flex items-center justify-center">
+                <svg class="w-[180px] h-[180px]" x-cloak aria-hidden="true">
+                  <circle
+                    class="text-white"
+                    stroke-width="20"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                  <circle
+                    class="text-[#83C7FF]"
+                    stroke-width="20"
+                    :stroke-dasharray="circumference"
+                    :stroke-dashoffset="circumference - percent / 100 * circumference"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                </svg>
+
+                <span class="absolute text-2xl" x-text="`${percent}%`"></span>
+              </div>
+              <p
+                class="font-nexabold font-bold text-white uppercase text-[25px]"
+              >
+                Gameplay
+              </p>
+            </div>
+          </div>
+          <div class="value_block">
+            <div
+              class="flex flex-col justify-center gap-3 text-center max-w-[180px]"
+              x-data="{ circumference: 80 * 2 * Math.PI, percent: 83 }"
+            >
+              <div class="flex items-center justify-center">
+                <svg class="w-[180px] h-[180px]" x-cloak aria-hidden="true">
+                  <circle
+                    class="text-white"
+                    stroke-width="20"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                  <circle
+                    class="text-[#83C7FF]"
+                    stroke-width="20"
+                    :stroke-dasharray="circumference"
+                    :stroke-dashoffset="circumference - percent / 100 * circumference"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                </svg>
+
+                <span class="absolute text-2xl" x-text="`${percent}%`"></span>
+              </div>
+              <p
+                class="font-nexabold font-bold text-white uppercase text-[25px]"
+              >
+                value
+              </p>
+            </div>
+          </div>
+          <div class="features_block">
+            <div
+              class="flex flex-col justify-center gap-3 text-center max-w-[180px]"
+              x-data="{ circumference: 80 * 2 * Math.PI, percent: 52 }"
+            >
+              <div class="flex items-center justify-center">
+                <svg class="w-[180px] h-[180px]" x-cloak aria-hidden="true">
+                  <circle
+                    class="text-white"
+                    stroke-width="20"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                  <circle
+                    class="text-[#83C7FF]"
+                    stroke-width="20"
+                    :stroke-dasharray="circumference"
+                    :stroke-dashoffset="circumference - percent / 100 * circumference"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                </svg>
+
+                <span class="absolute text-2xl" x-text="`${percent}%`"></span>
+              </div>
+              <p
+                class="font-nexabold font-bold text-white uppercase text-[25px]"
+              >
+                Features
+              </p>
+            </div>
+          </div>
+          <div class="graphic_block">
+            <div
+              class="flex flex-col justify-center gap-3 text-center max-w-[180px]"
+              x-data="{ circumference: 80 * 2 * Math.PI, percent: 35 }"
+            >
+              <div class="flex items-center justify-center">
+                <svg class="w-[180px] h-[180px]" x-cloak aria-hidden="true">
+                  <circle
+                    class="text-white"
+                    stroke-width="20"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                  <circle
+                    class="text-[#83C7FF]"
+                    stroke-width="20"
+                    :stroke-dasharray="circumference"
+                    :stroke-dashoffset="circumference - percent / 100 * circumference"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                    fill="transparent"
+                    r="80"
+                    cx="90"
+                    cy="90"
+                  />
+                </svg>
+
+                <span class="absolute text-2xl" x-text="`${percent}%`"></span>
+              </div>
+              <p
+                class="font-nexabold font-bold text-white uppercase text-[25px]"
+              >
+                Graphics
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dice_image absolute top-1/2 left-0">
+        <img src="./assets/src/images/dice_img.png" alt="dice image" />
+      </div>
+
+      <div class="blue_symbol absolute bottom-0 right-0">
+        <img src="./assets/src/images/blue_symbol.png" alt="blue symbol" />
+      </div>
+    </section>
+
+    <!--
+        Content section
+    -->
+
+    <section class="content_container pt-12 relative">
+      <div class="content_container">
+        <div
+          class="max-w-[854px] mx-auto text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4"
+        >
+          <h4 class="text-white font-nexaregular text-[24px]">
+            3D slot superstars Betsoft!
+          </h4>
+          <p>
+            After you place your bet, the dealer gives you seven cards and deals
+            seven downcards to himself. You have to create a two card hand and a
+            five card hand out of the seven cards. The online casino lets you do
+            this via the House Way tool, or you can do it on your own. Make sure
+            that the two card hand is of less value than the five card hand.
+            Here’s an example:
+          </p>
+          <p>
+            Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put the 3
+            with the Joker for the two card hand and the Jack, 9, 10, Queen and
+            8 for the five card hand. The reason that you do this is so that you
+            can create a straight with the five card hand, 8, 9, 10, Jack and
+            Queen.
+          </p>
+        </div>
+
+        <!--Accordion-->
+
+        <div class="accordion max-w-[830px] mx-auto my-[14px]">
+          <div
+            class="text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4"
+          >
+            <div class="accord">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
+                >
+                  <h2
+                    class="font-nexaregular text-[18px] font-normal text-white"
+                  >
+                    It’s Time for an Arctic Adventure courtesy of 3D slot
+                    superstars Betsoft!
+                  </h2>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001"
+                        stroke="#A4D8FF"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div
+                  class="bg-[#0C052F] text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4 mt-3 group-open:animate-fadeIn"
+                >
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3D slot superstars Betsoft!
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand. Here’s an
+                    example:
+                  </p>
+                  <p>
+                    Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put
+                    the 3 with the Joker for the two card hand and the Jack, 9,
+                    10, Queen and 8 for the five card hand. The reason that you
+                    do this is so that you can create a straight with the five
+                    card hand, 8, 9, 10, Jack and Queen.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3Artic Adventure
+                  </h4>
+                  <p>
+                    For your two card hand, the Joker counts as an Ace. Your two
+                    card hand is Ace (Joker), 3. If the dealer’s five card hand
+                    is King, King, King, 3, 2, then you win with your five card
+                    hand because a straight beats 3 of a Kind. If the dealer’s
+                    two card hand is Ace, 4, then you lose with your two card
+                    hand because an Ace, 4 beats an Ace (Joker), 3.
+                  </p>
+                  <p>
+                    The end result in this example is a tie. You won the five
+                    card hand and the dealer won the two card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    Symbols & gameplay
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[18px]">
+                    Bullets & Steps
+                  </h4>
+                  <ul class="accordion_list">
+                    <li>
+                      Act – To check, call, play, fold, open betting or raise.
+                      In Pai Gow Poker, you can only play or fold.
+                    </li>
+                    <li>
+                      Ante – The minimum bet before a game of poker begins.
+                    </li>
+                    <li>Deal – The act of distributing cards to players.</li>
+                    <li>
+                      Face cards – Cards in the deck with “faces”: the Jack,
+                      Queen and King.
+                    </li>
+                    <li>
+                      Flush – A hand where all of the cards are of the same
+                      suit: all cards are diamonds, clubs, hearts or spades.
+                    </li>
+                    <li>
+                      Fold – Giving up on the hand, admitting that you’ve lost.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="accord">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
+                >
+                  <h2
+                    class="font-nexaregular text-[18px] font-normal text-white"
+                  >
+                    It’s Time for an Arctic Adventure courtesy of 3D slot
+                    superstars Betsoft!
+                  </h2>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001"
+                        stroke="#A4D8FF"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div
+                  class="bg-[#0C052F] text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4 mt-3 group-open:animate-fadeIn"
+                >
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3D slot superstars Betsoft!
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand. Here’s an
+                    example:
+                  </p>
+                  <p>
+                    Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put
+                    the 3 with the Joker for the two card hand and the Jack, 9,
+                    10, Queen and 8 for the five card hand. The reason that you
+                    do this is so that you can create a straight with the five
+                    card hand, 8, 9, 10, Jack and Queen.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3Artic Adventure
+                  </h4>
+                  <p>
+                    For your two card hand, the Joker counts as an Ace. Your two
+                    card hand is Ace (Joker), 3. If the dealer’s five card hand
+                    is King, King, King, 3, 2, then you win with your five card
+                    hand because a straight beats 3 of a Kind. If the dealer’s
+                    two card hand is Ace, 4, then you lose with your two card
+                    hand because an Ace, 4 beats an Ace (Joker), 3.
+                  </p>
+                  <p>
+                    The end result in this example is a tie. You won the five
+                    card hand and the dealer won the two card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    Symbols & gameplay
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[18px]">
+                    Bullets & Steps
+                  </h4>
+                  <ul class="accordion_list">
+                    <li>
+                      Act – To check, call, play, fold, open betting or raise.
+                      In Pai Gow Poker, you can only play or fold.
+                    </li>
+                    <li>
+                      Ante – The minimum bet before a game of poker begins.
+                    </li>
+                    <li>Deal – The act of distributing cards to players.</li>
+                    <li>
+                      Face cards – Cards in the deck with “faces”: the Jack,
+                      Queen and King.
+                    </li>
+                    <li>
+                      Flush – A hand where all of the cards are of the same
+                      suit: all cards are diamonds, clubs, hearts or spades.
+                    </li>
+                    <li>
+                      Fold – Giving up on the hand, admitting that you’ve lost.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="accord">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
+                >
+                  <h2
+                    class="font-nexaregular text-[18px] font-normal text-white"
+                  >
+                    It’s Time for an Arctic Adventure courtesy of 3D slot
+                    superstars Betsoft!
+                  </h2>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001"
+                        stroke="#A4D8FF"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div
+                  class="bg-[#0C052F] text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4 mt-3 group-open:animate-fadeIn"
+                >
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3D slot superstars Betsoft!
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand. Here’s an
+                    example:
+                  </p>
+                  <p>
+                    Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put
+                    the 3 with the Joker for the two card hand and the Jack, 9,
+                    10, Queen and 8 for the five card hand. The reason that you
+                    do this is so that you can create a straight with the five
+                    card hand, 8, 9, 10, Jack and Queen.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3Artic Adventure
+                  </h4>
+                  <p>
+                    For your two card hand, the Joker counts as an Ace. Your two
+                    card hand is Ace (Joker), 3. If the dealer’s five card hand
+                    is King, King, King, 3, 2, then you win with your five card
+                    hand because a straight beats 3 of a Kind. If the dealer’s
+                    two card hand is Ace, 4, then you lose with your two card
+                    hand because an Ace, 4 beats an Ace (Joker), 3.
+                  </p>
+                  <p>
+                    The end result in this example is a tie. You won the five
+                    card hand and the dealer won the two card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    Symbols & gameplay
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[18px]">
+                    Bullets & Steps
+                  </h4>
+                  <ul class="accordion_list">
+                    <li>
+                      Act – To check, call, play, fold, open betting or raise.
+                      In Pai Gow Poker, you can only play or fold.
+                    </li>
+                    <li>
+                      Ante – The minimum bet before a game of poker begins.
+                    </li>
+                    <li>Deal – The act of distributing cards to players.</li>
+                    <li>
+                      Face cards – Cards in the deck with “faces”: the Jack,
+                      Queen and King.
+                    </li>
+                    <li>
+                      Flush – A hand where all of the cards are of the same
+                      suit: all cards are diamonds, clubs, hearts or spades.
+                    </li>
+                    <li>
+                      Fold – Giving up on the hand, admitting that you’ve lost.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <div class="accord">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
+                >
+                  <h2
+                    class="font-nexaregular text-[18px] font-normal text-white"
+                  >
+                    It’s Time for an Arctic Adventure courtesy of 3D slot
+                    superstars Betsoft!
+                  </h2>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001"
+                        stroke="#A4D8FF"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div
+                  class="bg-[#0C052F] text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4 mt-3 group-open:animate-fadeIn"
+                >
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3D slot superstars Betsoft!
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand. Here’s an
+                    example:
+                  </p>
+                  <p>
+                    Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put
+                    the 3 with the Joker for the two card hand and the Jack, 9,
+                    10, Queen and 8 for the five card hand. The reason that you
+                    do this is so that you can create a straight with the five
+                    card hand, 8, 9, 10, Jack and Queen.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3Artic Adventure
+                  </h4>
+                  <p>
+                    For your two card hand, the Joker counts as an Ace. Your two
+                    card hand is Ace (Joker), 3. If the dealer’s five card hand
+                    is King, King, King, 3, 2, then you win with your five card
+                    hand because a straight beats 3 of a Kind. If the dealer’s
+                    two card hand is Ace, 4, then you lose with your two card
+                    hand because an Ace, 4 beats an Ace (Joker), 3.
+                  </p>
+                  <p>
+                    The end result in this example is a tie. You won the five
+                    card hand and the dealer won the two card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    Symbols & gameplay
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[18px]">
+                    Bullets & Steps
+                  </h4>
+                  <ul class="accordion_list">
+                    <li>
+                      Act – To check, call, play, fold, open betting or raise.
+                      In Pai Gow Poker, you can only play or fold.
+                    </li>
+                    <li>
+                      Ante – The minimum bet before a game of poker begins.
+                    </li>
+                    <li>Deal – The act of distributing cards to players.</li>
+                    <li>
+                      Face cards – Cards in the deck with “faces”: the Jack,
+                      Queen and King.
+                    </li>
+                    <li>
+                      Flush – A hand where all of the cards are of the same
+                      suit: all cards are diamonds, clubs, hearts or spades.
+                    </li>
+                    <li>
+                      Fold – Giving up on the hand, admitting that you’ve lost.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!--Accordion End-->
+
+        <button
+          class="block text-center text-[#40A2FF] text-[12px] font-nexaheavy font-black leading-[18px] mx-auto"
+        >
+          Read Less
+        </button>
+      </div>
+
+      <div class="card_image absolute top-1/2 left-0">
+        <img src="./assets/src/images/card.png" alt="card image" />
+      </div>
+      <div class="roller_image absolute bottom-10 right-0">
+        <img src="./assets/src/images/roller.png" alt="roller image" />
+      </div>
+    </section>
+
+    <!--
+        Recent Winner Section
+    -->
+  </body>
+</html>
