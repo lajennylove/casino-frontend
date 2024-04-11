@@ -43,8 +43,94 @@
   src: url(../fonts/KommissarCondensed-Medium.woff2);
 }
 
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url(../fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu Regular";
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url(../fonts/Ubuntu-Light.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu Medium";
+  src: url(../fonts/Ubuntu-Medium.ttf);
+}
+
 li::before {
   content: url("../images/yellow.png");
   width: 20px;
   margin-right: 8px;
+}
+
+// Set border-radius on the top-left and bottom-left of the first table data on the table row
+#winner_table td:first-child,
+#winner_table th:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+// Set border-radius on the top-right and bottom-right of the last table data on the table row
+#winner_table td:last-child,
+#winner_table th:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.top_arrows .tns-outer {
+  position: relative;
+}
+
+.top_arrows .tns-controls {
+  position: absolute;
+  right: 0;
+  top: -35px;
+  display: flex;
+  gap: 5px;
+}
+
+.top_arrows [data-controls="prev"] {
+  border-radius: 8px 0 0 8px;
+}
+
+.top_arrows [data-controls="next"] {
+  border-radius: 0 8px 8px 0;
+}
+
+.tns-nav {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.tns-nav button {
+  height: 4px;
+  width: 100px;
+  background-color: #5128a3;
+  border: none;
+  margin-left: 0;
+}
+.tns-nav .tns-nav-active {
+  background-color: #007bff;
+  width: 66px;
+}
+
+.top_arrows .tns-outer [data-action="start"],
+.top_arrows .tns-outer [data-action="stop"] {
+  display: none;
+}
+
+.top_arrows button[data-controls="prev"] img {
+  border-radius: 8px 0 0 8px;
+}
+
+.top_arrows button[data-controls="next"] img {
+  border-radius: 0 8px 8px 0;
+}
+
+.interested_game_container .tns-nav {
+  display: none;
 }

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <!--[if (lt IE 9)
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script
+    ><![endif]-->
     <!-- REQUIRED // Load js and css files -->
     <script type="module" src="/main.js"></script>
     <script
@@ -789,5 +796,552 @@
     <!--
         Recent Winner Section
     -->
+
+    <section class="recent_winner_container pt-12">
+      <div class="recent_container max-w-[854px] mx-auto">
+        <h3 class="text-white font-nexabold font-bold text-[32px] mb-5">
+          Recent Winners
+        </h3>
+
+        <div
+          class="relative overflow-x-auto bg-[#c8bfdb14] rounded-xl px-4 py-5"
+        >
+          <table
+            id="winner_table"
+            class="w-full text-[#ffffff80] font-roboto border-separate border-spacing-y-3"
+          >
+            <thead class="text-sm font-bold text-center">
+              <tr>
+                <th scope="col" class="px-6 py-3">Name</th>
+                <th scope="col" class="px-6 py-3">Prize</th>
+                <th scope="col" class="px-6 py-3">Wager</th>
+                <th scope="col" class="px-6 py-3">Payout</th>
+              </tr>
+            </thead>
+            <tbody class="text-center text-[12px]">
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >1</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >2</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >3</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >4</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      ><span>5</span
+                      ><span
+                        class="text-white font-nexaheavy font-black leading-1 text-[5px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        >You Won</span
+                      ></span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >6</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >7</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >8</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >9</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+              <tr class="bg-[#d7c7f917]">
+                <td scope="col" class="px-6 py-3 table-cell">
+                  <span class="flex items-center justify-center gap-2">
+                    <span
+                      class="block w-7 text-[#D7C7F9] text-[11px] font-nexabold font-bold bg-[url('/assets/src/images/td_bg.svg')] bg-no-repeat bg-center relative"
+                      >10</span
+                    >
+                    <span class="text-left">D523311</span>
+                  </span>
+                </td>
+                <td class="px-6 py-3">Let it Ride Single Hand</td>
+                <td class="px-6 py-3">14,422,982</td>
+                <td class="px-6 py-3">14,422,982</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="show_all_rows w-[150px] mx-auto text-center mt-3">
+            <a
+              class="block py-5 px-2 text-[#40A2FF] font-nexaheavy font-black text-[12px] text-center"
+              href=""
+              >See All Participants</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Testimonials-->
+
+    <section class="testimonial_section">
+      <!-- ### Lives & Upcoming SLIDER  ### -->
+      <div class="max-w-[854px] mx-auto">
+        <div
+          class="outer_container_shadow top_arrows relative overflow-hidden z-50 pt-8"
+        >
+          <h2
+            class="text-white font-ubuntuMedium text-base sm:text-3xl font-medium"
+          >
+            What other people say
+          </h2>
+          <div class="testimonial-slider mt-6">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div
+                class="posts-slide max-w-[416px] p-10 bg-[#1b143d] rounded-xl"
+              >
+                <div class="testimonial_content">
+                  <div>
+                    <h4
+                      class="game_name text-white font-nexabold font-bold text-[24px] leading-7 mb-2"
+                    >
+                      King2Queens
+                    </h4>
+                    <p
+                      class="date text-[rgba(199, 210, 238, 0.40)] text-[12px] font-roboto font-bold mb-4"
+                    >
+                      User since: May 5,2014
+                    </p>
+                    <p
+                      class="text-[#C7D2EE] font-roboto text-base font-normal leading-6 bg-[url('/assets/src/images/comma.png')] bg-no-repeat bg-right-top"
+                    >
+                      Huge payouts and a lot of excitement - that is what I love
+                      about playing Sic Bo. I like that there are so many ways
+                      to bet and that each offers its own set of challenges. I
+                      have been able to win some massive payouts on this game,
+                      which turned out fun.
+                    </p>
+                    <img
+                      class="mt-4"
+                      src="./assets/src/images/star_review.png"
+                      alt="star review"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div
+                class="posts-slide max-w-[416px] p-10 bg-[#1b143d] rounded-xl"
+              >
+                <div class="testimonial_content">
+                  <div>
+                    <h4
+                      class="game_name text-white font-nexabold font-bold text-[24px] leading-7 mb-2"
+                    >
+                      King2Queens
+                    </h4>
+                    <p
+                      class="date text-[rgba(199, 210, 238, 0.40)] text-[12px] font-roboto font-bold mb-4"
+                    >
+                      User since: May 5,2014
+                    </p>
+                    <p
+                      class="text-[#C7D2EE] font-roboto text-base font-normal leading-6 bg-[url('/assets/src/images/comma.png')] bg-no-repeat bg-right"
+                    >
+                      Huge payouts and a lot of excitement - that is what I love
+                      about playing Sic Bo. I like that there are so many ways
+                      to bet and that each offers its own set of challenges. I
+                      have been able to win some massive payouts on this game,
+                      which turned out fun.
+                    </p>
+                    <img
+                      class="mt-4"
+                      src="./assets/src/images/star_review.png"
+                      alt="star review"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div
+                class="posts-slide max-w-[416px] p-10 bg-[#1b143d] rounded-xl"
+              >
+                <div class="testimonial_content">
+                  <div>
+                    <h4
+                      class="game_name text-white font-nexabold font-bold text-[24px] leading-7 mb-2"
+                    >
+                      King2Queens
+                    </h4>
+                    <p
+                      class="date text-[rgba(199, 210, 238, 0.40)] text-[12px] font-roboto font-bold mb-4"
+                    >
+                      User since: May 5,2014
+                    </p>
+                    <p
+                      class="text-[#C7D2EE] font-roboto text-base font-normal leading-6 bg-[url('/assets/src/images/comma.png')] bg-no-repeat bg-right-top"
+                    >
+                      Huge payouts and a lot of excitement - that is what I love
+                      about playing Sic Bo. I like that there are so many ways
+                      to bet and that each offers its own set of challenges. I
+                      have been able to win some massive payouts on this game,
+                      which turned out fun.
+                    </p>
+                    <img
+                      class="mt-4"
+                      src="./assets/src/images/star_review.png"
+                      alt="star review"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <div
+                class="posts-slide max-w-[416px] p-10 bg-[#1b143d] rounded-xl"
+              >
+                <div class="testimonial_content">
+                  <div>
+                    <h4
+                      class="game_name text-white font-nexabold font-bold text-[24px] leading-7 mb-2"
+                    >
+                      King2Queens
+                    </h4>
+                    <p
+                      class="date text-[rgba(199, 210, 238, 0.40)] text-[12px] font-roboto font-bold mb-4"
+                    >
+                      User since: May 5,2014
+                    </p>
+                    <p
+                      class="text-[#C7D2EE] font-roboto text-base font-normal leading-6 bg-[url('/assets/src/images/comma.png')] bg-no-repeat bg-right-top"
+                    >
+                      Huge payouts and a lot of excitement - that is what I love
+                      about playing Sic Bo. I like that there are so many ways
+                      to bet and that each offers its own set of challenges. I
+                      have been able to win some massive payouts on this game,
+                      which turned out fun.
+                    </p>
+                    <img
+                      class="mt-4"
+                      src="./assets/src/images/star_review.png"
+                      alt="star review"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Games you might Interested Section-->
+
+    <section class="interested_game_section">
+      <!-- ### Lives & Upcoming SLIDER  ### -->
+      <div class="max-w-[854px] mx-auto">
+        <div
+          class="interested_game_container top_arrows relative overflow-hidden z-50 pt-8"
+        >
+          <h2
+            class="text-white font-ubuntuMedium text-base sm:text-3xl font-medium"
+          >
+            Games you might be insterested in
+          </h2>
+          <div class="interested_game-slider mt-6">
+            <!-- Slide 1 -->
+            <div class="slide relative">
+              <div class="posts-slide relative">
+                <div class="w-full rounded-lg">
+                  <img src="./assets/src/images/pic_1.png" alt="game image" />
+                </div>
+                <div class="game_info flex items-center gap-2 my-2">
+                  <div class="font-roboto">
+                    <p
+                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                    >
+                      Casino Game Long Name Example
+                    </p>
+                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                      Provider
+                    </p>
+                  </div>
+                  <img
+                    src="./assets/src/images/info_icon.png"
+                    alt="more info"
+                  />
+                </div>
+              </div>
+              <img
+                class="heart block absolute top-1 right-3"
+                src="./assets/src/images/like_pic.png"
+                alt="like image"
+              />
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide relative">
+              <div class="posts-slide">
+                <div class="w-full rounded-lg">
+                  <img src="./assets/src/images/pic_2.png" alt="game image" />
+                </div>
+                <div class="game_info flex items-center gap-2 my-2">
+                  <div class="font-roboto">
+                    <p
+                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                    >
+                      Casino Game Long Name Example
+                    </p>
+                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                      Provider
+                    </p>
+                  </div>
+                  <img
+                    src="./assets/src/images/info_icon.png"
+                    alt="more info"
+                  />
+                </div>
+              </div>
+              <img
+                class="heart block absolute top-1 right-3"
+                src="./assets/src/images/like_pic.png"
+                alt="like image"
+              />
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide relative">
+              <div class="posts-slide rounded-xl">
+                <div class="w-full rounded-lg">
+                  <img src="./assets/src/images/pic_3.png" alt="game image" />
+                </div>
+                <div class="game_info flex items-center gap-2 my-2">
+                  <div class="font-roboto">
+                    <p
+                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                    >
+                      Casino Game Long Name Example
+                    </p>
+                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                      Provider
+                    </p>
+                  </div>
+                  <img
+                    src="./assets/src/images/info_icon.png"
+                    alt="more info"
+                  />
+                </div>
+              </div>
+              <img
+                class="heart block absolute top-1 right-3"
+                src="./assets/src/images/like_pic.png"
+                alt="like image"
+              />
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide relative">
+              <div class="posts-slide rounded-xl">
+                <div class="w-full rounded-lg">
+                  <img src="./assets/src/images/pic_2.png" alt="game image" />
+                </div>
+                <div class="game_info flex items-center gap-2 my-2">
+                  <div class="font-roboto">
+                    <p
+                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                    >
+                      Casino Game Long Name Example
+                    </p>
+                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                      Provider
+                    </p>
+                  </div>
+                  <img
+                    src="./assets/src/images/info_icon.png"
+                    alt="more info"
+                  />
+                </div>
+              </div>
+              <img
+                class="heart block absolute top-1 right-3"
+                src="./assets/src/images/like_pic.png"
+                alt="like image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Related Articles Section-->
+
+    <!--Testimonials-->
+
+    <section class="testimonial_section">
+      <!-- ### Lives & Upcoming SLIDER  ### -->
+      <div class="max-w-[854px] mx-auto">
+        <div
+          class="outer_container_shadow top_arrows relative overflow-hidden z-50 pt-8"
+        >
+          <h2
+            class="text-white font-ubuntuMedium text-base sm:text-3xl font-medium"
+          >
+            What other people say
+          </h2>
+          <div class="testimonial-slider mt-6">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="post_container">
+                <div class="left_block w-[180px]bg-[#2C2A5E]"></div>
+                <div class="right_container"></div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div
+                class="posts-slide max-w-[416px] p-10 bg-[#1b143d] rounded-xl"
+              >
+                <div class="testimonial_content">
+                  <div>
+                    <h4
+                      class="game_name text-white font-nexabold font-bold text-[24px] leading-7 mb-2"
+                    >
+                      King2Queens
+                    </h4>
+                    <p
+                      class="date text-[rgba(199, 210, 238, 0.40)] text-[12px] font-roboto font-bold mb-4"
+                    >
+                      User since: May 5,2014
+                    </p>
+                    <p
+                      class="text-[#C7D2EE] font-roboto text-base font-normal leading-6 bg-[url('/assets/src/images/comma.png')] bg-no-repeat bg-right"
+                    >
+                      Huge payouts and a lot of excitement - that is what I love
+                      about playing Sic Bo. I like that there are so many ways
+                      to bet and that each offers its own set of challenges. I
+                      have been able to win some massive payouts on this game,
+                      which turned out fun.
+                    </p>
+                    <img
+                      class="mt-4"
+                      src="./assets/src/images/star_review.png"
+                      alt="star review"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
   </body>
 </html>
