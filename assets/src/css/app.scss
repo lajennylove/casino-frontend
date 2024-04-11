@@ -134,3 +134,10 @@ li::before {
 .interested_game_container .tns-nav {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .top_arrows .tns-controls,
+  .top_arrows .tns-nav {
+    display: none;
+  }
+}

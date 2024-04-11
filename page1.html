@@ -26,7 +26,9 @@
     >
       <div class="game_page max-w-[1430px] mx-auto pt-12">
         <div class="breadcrumbs_container">
-          <div class="breadcrumbs flex items-center gap-8">
+          <div
+            class="breadcrumbs flex items-center justify-between md:justify-normal gap-8 px-2 md:px-0"
+          >
             <div
               class="back_games max-w-[178px] border border-[A4D8FF] text-white rounded-3xl"
             >
@@ -36,12 +38,14 @@
                 ><img
                   src="./assets/src/images/back_icon.png"
                   alt="back icon"
-                /><span>Back to Games</span></a
+                /><span
+                  >Back <span class="hidden md:inline">to Games</span></span
+                ></a
               >
             </div>
 
             <div
-              class="breadcrumbs_menu text-[#C4E8FF] font-roboto leading-6 font-normal"
+              class="breadcrumbs_menu text-[#C4E8FF] font-roboto leading-6 font-normal text-[12px] md:text-base"
             >
               <a href="#">Casino</a> &gt; <a href="#">Games</a> &gt;
               <a href="#">Yak & Yeti</a>
@@ -49,12 +53,14 @@
           </div>
         </div>
 
-        <div class="game_play_banner pt-12">
+        <div
+          class="game_play_banner mt-6 md:mt-12 bg-[#1d1b48] rounded-[20px] px-2 lg:px-6 flex flex-col pb-10"
+        >
           <div
-            class="banner_heading bg-[#1d1b48] flex items-center justify-between px-6"
+            class="banner_heading flex flex-col md:flex-row items-center justify-between order-3 md:order-1"
           >
             <div
-              class="left_col font-nexaregular text-[32px] font-normal leading-[38.4px] text-white flex items-center gap-5 py-8"
+              class="left_col font-nexaregular text-[20px] lg:text-2xl xl:text-[32px] font-normal leading-[38.4px] text-white flex items-center gap-5 py-8"
             >
               <p>Yak & Yeti Roll Slot Game</p>
               <p class="flex items-center gap-2">
@@ -64,37 +70,69 @@
             </div>
 
             <div
-              class="right_col flex items-center text-center gap-3 font-nexaheavy font-black text-[18px]"
+              class="right_col flex flex-col md:flex-row items-center text-center gap-3 font-nexaheavy font-black text-[18px]"
             >
               <a
-                class="block w-[254px] py-5 px-3 rounded-[50px] border border-2-[#A4D8FF] text-white"
+                class="block w-[356px] md:w-[254px] py-5 px-3 rounded-[50px] border border-2-[#A4D8FF] text-white"
                 href="#"
                 >Play Demo</a
               >
               <a
-                class="block w-[254px] py-5 px-3 rounded-[50px] border border-1-[#D2EEFF] bg-[#D2EEFF] text-[#280374]"
+                class="block w-[356px] md:w-[254px] py-5 px-3 rounded-[50px] border border-1-[#D2EEFF] bg-[#D2EEFF] text-[#280374]"
                 href="#"
                 >Play for Real</a
               >
             </div>
           </div>
-          <div class="game_image w-full h-[747px]">
+          <div class="game_image w-full h-[747px] order-1 md:order-2">
             <img
-              class="block w-full h-full"
+              class="block w-full h-full rounded-[6px]"
               src="./assets/src/images/game_image.jpeg"
               alt="game image"
             />
           </div>
           <div
-            class="banner_footer bg-[#1d1b48] flex items-center justify-center font-nexaregular font-normal text-2xl py-8"
+            class="thumbnails_container flex justify-between items-center pt-8 order-2 md:order-3"
+          >
+            <div class="w-1/4">
+              <img
+                class="rounded-md"
+                src="./assets/src/images/thumbnail_1.png"
+                alt="game thumbnail"
+              />
+            </div>
+            <div class="w-1/4">
+              <img
+                class="rounded-md"
+                src="./assets/src/images/thumbnail_2.png"
+                alt="game thumbnail"
+              />
+            </div>
+            <div class="w-1/4">
+              <img
+                class="rounded-md"
+                src="./assets/src/images/thumbnail_3.png"
+                alt="game thumbnail"
+              />
+            </div>
+            <div class="w-1/4">
+              <img
+                class="rounded-md"
+                src="./assets/src/images/thumbnail_4.png"
+                alt="game thumbnail"
+              />
+            </div>
+          </div>
+          <div
+            class="banner_footer text-center font-nexaregular font-normal text-2xl pt-8 hidden md:block order-4"
           >
             <p>Min Bet: 0.10 / Max Bet: 10.00</p>
           </div>
         </div>
       </div>
-      <div class="free_spin_container pt-12">
+      <div class="free_spin_container pt-12 bg-[#0C052F]">
         <div
-          class="free_spin max-w-[854px] mx-auto text-white font-nexabold font-bold tracking-[0.1px] text-center text-[18px] flex items-center gap-[14px]"
+          class="free_spin max-w-[854px] mx-auto text-white font-nexabold font-bold tracking-[0.1px] text-center text-[18px] items-center gap-[14px] hidden lg:flex"
         >
           <a
             class="block bg-[#302E5F] rounded-[26px] w-[134px] px-3 py-2"
@@ -291,11 +329,11 @@
           </div>
         </div>
       </div>
-      <div class="dice_image absolute top-1/2 left-0">
+      <div class="dice_image absolute top-1/2 left-0 hidden lg:block">
         <img src="./assets/src/images/dice_img.png" alt="dice image" />
       </div>
 
-      <div class="blue_symbol absolute bottom-0 right-0">
+      <div class="blue_symbol absolute bottom-0 right-0 hidden lg:block">
         <img src="./assets/src/images/blue_symbol.png" alt="blue symbol" />
       </div>
     </section>
@@ -304,7 +342,7 @@
         Content section
     -->
 
-    <section class="content_container pt-12 relative">
+    <section class="content_container pt-12 relative px-3 md:px-0">
       <div class="content_container">
         <div
           class="max-w-[854px] mx-auto text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4"
@@ -341,7 +379,117 @@
                   class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
                 >
                   <h2
-                    class="font-nexaregular text-[18px] font-normal text-white"
+                    class="font-nexaregular text-[15px] md:text-[18px] font-normal text-white"
+                  >
+                    It’s Time for an Arctic Adventure courtesy of 3D slot
+                    superstars Betsoft!
+                  </h2>
+                  <span class="transition group-open:rotate-180">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001"
+                        stroke="#A4D8FF"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div
+                  class="bg-[#0C052F] text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4 mt-3 group-open:animate-fadeIn"
+                >
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3D slot superstars Betsoft!
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand. Here’s an
+                    example:
+                  </p>
+                  <p>
+                    Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put
+                    the 3 with the Joker for the two card hand and the Jack, 9,
+                    10, Queen and 8 for the five card hand. The reason that you
+                    do this is so that you can create a straight with the five
+                    card hand, 8, 9, 10, Jack and Queen.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    3Artic Adventure
+                  </h4>
+                  <p>
+                    For your two card hand, the Joker counts as an Ace. Your two
+                    card hand is Ace (Joker), 3. If the dealer’s five card hand
+                    is King, King, King, 3, 2, then you win with your five card
+                    hand because a straight beats 3 of a Kind. If the dealer’s
+                    two card hand is Ace, 4, then you lose with your two card
+                    hand because an Ace, 4 beats an Ace (Joker), 3.
+                  </p>
+                  <p>
+                    The end result in this example is a tie. You won the five
+                    card hand and the dealer won the two card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[24px]">
+                    Symbols & gameplay
+                  </h4>
+                  <p>
+                    After you place your bet, the dealer gives you seven cards
+                    and deals seven downcards to himself. You have to create a
+                    two card hand and a five card hand out of the seven cards.
+                    The online casino lets you do this via the House Way tool,
+                    or you can do it on your own. Make sure that the two card
+                    hand is of less value than the five card hand.
+                  </p>
+
+                  <h4 class="text-white font-nexaregular text-[18px]">
+                    Bullets & Steps
+                  </h4>
+                  <ul class="accordion_list">
+                    <li>
+                      Act – To check, call, play, fold, open betting or raise.
+                      In Pai Gow Poker, you can only play or fold.
+                    </li>
+                    <li>
+                      Ante – The minimum bet before a game of poker begins.
+                    </li>
+                    <li>Deal – The act of distributing cards to players.</li>
+                    <li>
+                      Face cards – Cards in the deck with “faces”: the Jack,
+                      Queen and King.
+                    </li>
+                    <li>
+                      Flush – A hand where all of the cards are of the same
+                      suit: all cards are diamonds, clubs, hearts or spades.
+                    </li>
+                    <li>
+                      Fold – Giving up on the hand, admitting that you’ve lost.
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="accord">
+              <details class="group">
+                <summary
+                  class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
+                >
+                  <h2
+                    class="font-nexaregular text-[15px] md:text-[18px] font-normal text-white"
                   >
                     It’s Time for an Arctic Adventure courtesy of 3D slot
                     superstars Betsoft!
@@ -554,123 +702,13 @@
                 </div>
               </details>
             </div>
-
             <div class="accord">
               <details class="group">
                 <summary
                   class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
                 >
                   <h2
-                    class="font-nexaregular text-[18px] font-normal text-white"
-                  >
-                    It’s Time for an Arctic Adventure courtesy of 3D slot
-                    superstars Betsoft!
-                  </h2>
-                  <span class="transition group-open:rotate-180">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M19.9201 8.95001L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.95001"
-                        stroke="#A4D8FF"
-                        stroke-width="1.5"
-                        stroke-miterlimit="10"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-
-                <div
-                  class="bg-[#0C052F] text-[#c7d2eecc] text-[14px] font-roboto leading-[26px] space-y-4 mt-3 group-open:animate-fadeIn"
-                >
-                  <h4 class="text-white font-nexaregular text-[24px]">
-                    3D slot superstars Betsoft!
-                  </h4>
-                  <p>
-                    After you place your bet, the dealer gives you seven cards
-                    and deals seven downcards to himself. You have to create a
-                    two card hand and a five card hand out of the seven cards.
-                    The online casino lets you do this via the House Way tool,
-                    or you can do it on your own. Make sure that the two card
-                    hand is of less value than the five card hand. Here’s an
-                    example:
-                  </p>
-                  <p>
-                    Dealer gives you a Jack, Joker, 3, 9, 10, 8, Queen. You put
-                    the 3 with the Joker for the two card hand and the Jack, 9,
-                    10, Queen and 8 for the five card hand. The reason that you
-                    do this is so that you can create a straight with the five
-                    card hand, 8, 9, 10, Jack and Queen.
-                  </p>
-
-                  <h4 class="text-white font-nexaregular text-[24px]">
-                    3Artic Adventure
-                  </h4>
-                  <p>
-                    For your two card hand, the Joker counts as an Ace. Your two
-                    card hand is Ace (Joker), 3. If the dealer’s five card hand
-                    is King, King, King, 3, 2, then you win with your five card
-                    hand because a straight beats 3 of a Kind. If the dealer’s
-                    two card hand is Ace, 4, then you lose with your two card
-                    hand because an Ace, 4 beats an Ace (Joker), 3.
-                  </p>
-                  <p>
-                    The end result in this example is a tie. You won the five
-                    card hand and the dealer won the two card hand.
-                  </p>
-
-                  <h4 class="text-white font-nexaregular text-[24px]">
-                    Symbols & gameplay
-                  </h4>
-                  <p>
-                    After you place your bet, the dealer gives you seven cards
-                    and deals seven downcards to himself. You have to create a
-                    two card hand and a five card hand out of the seven cards.
-                    The online casino lets you do this via the House Way tool,
-                    or you can do it on your own. Make sure that the two card
-                    hand is of less value than the five card hand.
-                  </p>
-
-                  <h4 class="text-white font-nexaregular text-[18px]">
-                    Bullets & Steps
-                  </h4>
-                  <ul class="accordion_list">
-                    <li>
-                      Act – To check, call, play, fold, open betting or raise.
-                      In Pai Gow Poker, you can only play or fold.
-                    </li>
-                    <li>
-                      Ante – The minimum bet before a game of poker begins.
-                    </li>
-                    <li>Deal – The act of distributing cards to players.</li>
-                    <li>
-                      Face cards – Cards in the deck with “faces”: the Jack,
-                      Queen and King.
-                    </li>
-                    <li>
-                      Flush – A hand where all of the cards are of the same
-                      suit: all cards are diamonds, clubs, hearts or spades.
-                    </li>
-                    <li>
-                      Fold – Giving up on the hand, admitting that you’ve lost.
-                    </li>
-                  </ul>
-                </div>
-              </details>
-            </div>
-            <div class="accord">
-              <details class="group">
-                <summary
-                  class="flex justify-between items-center font-medium cursor-pointer list-none px-6 py-5 bg-[#121041] rounded-xl"
-                >
-                  <h2
-                    class="font-nexaregular text-[18px] font-normal text-white"
+                    class="font-nexaregular text-[15px] md:text-[18px] font-normal text-white"
                   >
                     It’s Time for an Arctic Adventure courtesy of 3D slot
                     superstars Betsoft!
@@ -785,10 +823,10 @@
         </button>
       </div>
 
-      <div class="card_image absolute top-1/2 left-0">
+      <div class="card_image absolute top-1/2 left-0 hidden lg:block">
         <img src="./assets/src/images/card.png" alt="card image" />
       </div>
-      <div class="roller_image absolute bottom-10 right-0">
+      <div class="roller_image absolute bottom-10 right-0 hidden lg:block">
         <img src="./assets/src/images/roller.png" alt="roller image" />
       </div>
     </section>
@@ -797,14 +835,16 @@
         Recent Winner Section
     -->
 
-    <section class="recent_winner_container pt-12">
+    <section class="recent_winner_container pt-12 px-3 md:px-0">
       <div class="recent_container max-w-[854px] mx-auto">
-        <h3 class="text-white font-nexabold font-bold text-[32px] mb-5">
+        <h3
+          class="text-white font-ubuntuBold font-bold text-[20px] md:text-[32px] mb-5"
+        >
           Recent Winners
         </h3>
 
         <div
-          class="relative overflow-x-auto bg-[#c8bfdb14] rounded-xl px-4 py-5"
+          class="relative overflow-x-auto bg-[#c8bfdb14] rounded-xl px-2 py-5"
         >
           <table
             id="winner_table"
@@ -979,14 +1019,14 @@
 
     <!--Testimonials-->
 
-    <section class="testimonial_section">
+    <section class="testimonial_section px-3 md:px-0">
       <!-- ### Lives & Upcoming SLIDER  ### -->
       <div class="max-w-[854px] mx-auto">
         <div
           class="outer_container_shadow top_arrows relative overflow-hidden z-50 pt-8"
         >
           <h2
-            class="text-white font-ubuntuMedium text-base sm:text-3xl font-medium"
+            class="text-white font-ubuntuMedium text-[18px] sm:text-3xl font-medium"
           >
             What other people say
           </h2>
@@ -1141,14 +1181,14 @@
 
     <!--Games you might Interested Section-->
 
-    <section class="interested_game_section">
+    <section class="interested_game_section px-3 md:px-0">
       <!-- ### Lives & Upcoming SLIDER  ### -->
       <div class="max-w-[854px] mx-auto">
         <div
           class="interested_game_container top_arrows relative overflow-hidden z-50 pt-8"
         >
           <h2
-            class="text-white font-ubuntuMedium text-base sm:text-3xl font-medium"
+            class="text-white font-ubuntuMedium text-[18px] sm:text-3xl font-medium"
           >
             Games you might be insterested in
           </h2>
@@ -1162,22 +1202,25 @@
                 <div class="game_info flex items-center gap-2 my-2">
                   <div class="font-roboto">
                     <p
-                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                      class="game_title w-[108px] sm:w-[252px] text-white text-[12px] md:text-[20px] leading-[18px] md:leading-[30px] overflow-hidden line-clamp-1"
                     >
                       Casino Game Long Name Example
                     </p>
-                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                    <p
+                      class="provider text-[#A5A1BC] leading-[15px] md:leading-6 text-[10px] md:text-base"
+                    >
                       Provider
                     </p>
                   </div>
                   <img
+                    class="hidden md:block"
                     src="./assets/src/images/info_icon.png"
                     alt="more info"
                   />
                 </div>
               </div>
               <img
-                class="heart block absolute top-1 right-3"
+                class="heart block absolute top-1 right-3 w-[30px] md:w-[50px]"
                 src="./assets/src/images/like_pic.png"
                 alt="like image"
               />
@@ -1192,22 +1235,25 @@
                 <div class="game_info flex items-center gap-2 my-2">
                   <div class="font-roboto">
                     <p
-                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                      class="game_title w-[108px] sm:w-[252px] text-white text-[12px] md:text-[20px] leading-[18px] md:leading-[30px] overflow-hidden line-clamp-1"
                     >
                       Casino Game Long Name Example
                     </p>
-                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                    <p
+                      class="provider text-[#A5A1BC] leading-[15px] md:leading-6 text-[10px] md:text-base"
+                    >
                       Provider
                     </p>
                   </div>
                   <img
+                    class="hidden md:block"
                     src="./assets/src/images/info_icon.png"
                     alt="more info"
                   />
                 </div>
               </div>
               <img
-                class="heart block absolute top-1 right-3"
+                class="heart block absolute top-1 right-3 w-[30px] md:w-[50px]"
                 src="./assets/src/images/like_pic.png"
                 alt="like image"
               />
@@ -1222,22 +1268,25 @@
                 <div class="game_info flex items-center gap-2 my-2">
                   <div class="font-roboto">
                     <p
-                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                      class="game_title w-[108px] sm:w-[252px] text-white text-[12px] md:text-[20px] leading-[18px] md:leading-[30px] overflow-hidden line-clamp-1"
                     >
                       Casino Game Long Name Example
                     </p>
-                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                    <p
+                      class="provider text-[#A5A1BC] leading-[15px] md:leading-6 text-[10px] md:text-base"
+                    >
                       Provider
                     </p>
                   </div>
                   <img
+                    class="hidden md:block"
                     src="./assets/src/images/info_icon.png"
                     alt="more info"
                   />
                 </div>
               </div>
               <img
-                class="heart block absolute top-1 right-3"
+                class="heart block absolute top-1 right-3 w-[30px] md:w-[50px]"
                 src="./assets/src/images/like_pic.png"
                 alt="like image"
               />
@@ -1252,22 +1301,25 @@
                 <div class="game_info flex items-center gap-2 my-2">
                   <div class="font-roboto">
                     <p
-                      class="game_title w-[252px] text-white text-[20px] leading-[30px] overflow-hidden line-clamp-1"
+                      class="game_title w-[108px] sm:w-[252px] text-white text-[12px] md:text-[20px] leading-[18px] md:leading-[30px] overflow-hidden line-clamp-1"
                     >
                       Casino Game Long Name Example
                     </p>
-                    <p class="provider text-[#A5A1BC] text-base leading-6">
+                    <p
+                      class="provider text-[#A5A1BC] leading-[15px] md:leading-6 text-[10px] md:text-base"
+                    >
                       Provider
                     </p>
                   </div>
                   <img
+                    class="hidden md:block"
                     src="./assets/src/images/info_icon.png"
                     alt="more info"
                   />
                 </div>
               </div>
               <img
-                class="heart block absolute top-1 right-3"
+                class="heart block absolute top-1 right-3 w-[30px] md:w-[50px]"
                 src="./assets/src/images/like_pic.png"
                 alt="like image"
               />
@@ -1279,9 +1331,7 @@
 
     <!--Related Articles Section-->
 
-    <!--Testimonials-->
-
-    <section class="testimonial_section">
+    <section class="related_article_section px-3 md:px-0">
       <!-- ### Lives & Upcoming SLIDER  ### -->
       <div class="max-w-[854px] mx-auto">
         <div
@@ -1296,7 +1346,7 @@
             <!-- Slide 1 -->
             <div class="slide">
               <div class="post_container">
-                <div class="left_block w-[180px]bg-[#2C2A5E]"></div>
+                <div class="left_block w-[180px] bg-[#2C2A5E]"></div>
                 <div class="right_container"></div>
               </div>
             </div>

@@ -35,18 +35,16 @@ domReady(() => {
         '<img src="/assets/src/images/prev_icon.png" />',
         '<img src="/assets/src/images/next_icon.png" />',
       ],
-      fixedWidth: 285,
-      item: 1,
+      items: 1,
       slideBy: 1,
-      gutter: 10,
       loop: true,
       mouseDrag: true,
       autoplay: true,
       navPosition: "bottom",
       responsive: {
-        992: {
+        768: {
           fixedWidth: 422,
-          item: 2,
+          gutter: 10,
         },
       },
     });
@@ -68,17 +66,12 @@ domReady(() => {
         '<img src="/assets/src/images/prev_icon.png" />',
         '<img src="/assets/src/images/next_icon.png" />',
       ],
-      fixedWidth: "auto",
+      items: 3,
       slideBy: 1,
       gutter: 10,
       loop: true,
       mouseDrag: true,
       autoplay: true,
-      responsive: {
-        992: {
-          fixedWidth: 278,
-        },
-      },
     });
   }
 });
