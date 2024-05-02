@@ -181,7 +181,11 @@
                   class="w-[180px] h-[180px]"
                   x-cloak
                   aria-hidden="true"
-                  style="transform: scaleX(-1)"
+                  style="
+                    transform: scaleX(-1);
+                    border-top-left-radius: 110px;
+                    border-top-right-radius: 110px;
+                  "
                 >
                   <circle
                     class="text-white"
@@ -195,6 +199,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="20"
+                    stroke-linecap="butt"
                     :stroke-dasharray="circumference"
                     :stroke-dashoffset="(100 - percent) / 100 * circumference"
                     stroke-linecap="round"
@@ -219,7 +224,7 @@
           <div class="value_block">
             <div
               class="flex flex-col justify-center gap-3 text-center max-w-[180px] mx-auto"
-              x-data="{ circumference: 80 * 2 * Math.PI, percent: 83 }"
+              x-data="{ circumference: 80 * 2 * Math.PI, percent: 99 }"
             >
               <div class="flex items-center justify-center">
                 <svg
@@ -240,6 +245,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="20"
+                    stroke-linecap="butt"
                     :stroke-dasharray="circumference"
                     :stroke-dashoffset="(100 - percent) / 100 * circumference"
                     stroke-linecap="round"
@@ -285,6 +291,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="20"
+                    stroke-linecap="butt"
                     :stroke-dasharray="circumference"
                     :stroke-dashoffset="(100 - percent) / 100 * circumference"
                     stroke-linecap="round"
@@ -330,6 +337,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="20"
+                    stroke-linecap="butt"
                     :stroke-dasharray="circumference"
                     :stroke-dashoffset="(100 - percent) / 100 * circumference"
                     stroke-linecap="round"
@@ -381,6 +389,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="10"
+                    stroke-linecap="butt"
                     :stroke-dasharray="`${circumference}`"
                     :stroke-dashoffset="((100 - percent) / 100) * circumference"
                     stroke-linecap="round"
@@ -429,6 +438,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="10"
+                    stroke-linecap="butt"
                     :stroke-dasharray="`${circumference}`"
                     :stroke-dashoffset="((100 - percent) / 100) * circumference"
                     stroke-linecap="round"
@@ -476,6 +486,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="10"
+                    stroke-linecap="butt"
                     :stroke-dasharray="`${circumference}`"
                     :stroke-dashoffset="((100 - percent) / 100) * circumference"
                     stroke-linecap="round"
@@ -523,6 +534,7 @@
                   <circle
                     class="text-[#83C7FF]"
                     stroke-width="10"
+                    stroke-linecap="butt"
                     :stroke-dasharray="`${circumference}`"
                     :stroke-dashoffset="((100 - percent) / 100) * circumference"
                     stroke-linecap="round"
@@ -2051,9 +2063,9 @@
           </div>
 
           <div class="footer_up_page">
-            <a href=""
-              ><img src="./assets/src/images/top.png" alt="up arrow"
-            /></a>
+            <button id="topBtn">
+              <img src="./assets/src/images/top.png" alt="up arrow" />
+            </button>
           </div>
         </div>
 
